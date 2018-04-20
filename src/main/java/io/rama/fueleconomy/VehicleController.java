@@ -3,19 +3,27 @@ package io.rama.fueleconomy;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.ArrayList;
+
 @RestController
 @RequestMapping("/vehicles")
 public class VehicleController {
-    private final VehicleService vehicleService;
+    private final VinDecodingService vinDecodingService;
 
-    public VehicleController(VehicleService vehicleService) {
-        this.vehicleService = vehicleService;
+    public VehicleController(VinDecodingService vinDecodingService) {
+        this.vinDecodingService = vinDecodingService;
     }
 
     @GetMapping("/{vin}")
     @ResponseStatus(HttpStatus.OK)
-    public VehicleResponse vehicle(@PathVariable String vin) {
-        Vehicle vehicle = vehicleService.findByVin(vin);
-        return VehicleResponse.builder().vehicle(vehicle).build();
+    public VinDecodingResponse decodeVin(@PathVariable String vin) {
+        Vehicle vehicle = vinDecodingService.findByVin(vin);
+        return VinDecodingResponse.builder().vehicle(vehicle).build();
+    }
+
+    @GetMapping("/{vin}/mpg")
+    @ResponseStatus(HttpStatus.OK)
+    public ModelResponse getModels() {
+        return ModelResponse.builder().models(new ArrayList<>()).build();
     }
 }
