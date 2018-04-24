@@ -20,12 +20,12 @@ class VehicleContractSpec extends Specification {
 
     def "GET /vehicles/:vin responds with year, make, and model in payload"() {
         given:
-        vinDecodingService.findByVin(_) >> new Vehicle([
-                vin  : "some-vin",
-                make : "some-make",
-                model: "some-model",
-                year : 2017
-        ])
+        vinDecodingService.findByVin(_) >> Vehicle.builder()
+                .vin("some-vin")
+                .make("some-make")
+                .model("some-model")
+                .year(2017)
+                .build()
 
         expect:
         def response = mvc.perform(get("/vehicles/some-vin"))
@@ -36,19 +36,19 @@ class VehicleContractSpec extends Specification {
         response.json.vehicle.year
     }
 
-    def "GET /vehicles/:vin/mpg responds with 200 OK" () {
+    def "GET /vehicles/:vin/mpg responds with 200 OK"() {
         expect:
         mvc.perform(get("/vehicles/some-vin/mpg")).status == 200
     }
 
     def "GET /vehicles/:vin/mpg responds with models"() {
         given:
-        vinDecodingService.findByVin(_) >> new Vehicle([
-                vin  : "some-vin",
-                make : "some-make",
-                model: "some-model",
-                year : 2017
-        ])
+        vinDecodingService.findByVin(_) >>  Vehicle.builder()
+                .vin("some-vin")
+                .make("some-make")
+                .model("some-model")
+                .year(2017)
+                .build()
 
         expect:
         def response = mvc.perform(get("/vehicles/some-vin/mpg"))

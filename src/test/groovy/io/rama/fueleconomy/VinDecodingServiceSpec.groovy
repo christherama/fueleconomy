@@ -13,13 +13,13 @@ class VinDecodingServiceSpec extends Specification {
 
     def "findByVin responds with year, make and model" () {
         given:
-        restTemplate.getForObject(*_) >> new NhtsaResponse([
-                "results": [
+        restTemplate.getForObject(*_) >> new NhtsaResponse(
+                results: [
                         new NhtsaResult(["value": "2012","variable": "Model Year"]),
                         new NhtsaResult(["value": "KIA","variable": "Make"]),
                         new NhtsaResult(["value": "Soul","variable": "Model"])
                 ]
-        ])
+        )
 
         when:
         Vehicle vehicle = vinDecodingService.findByVin("KNDJT2A6XC7453418")
