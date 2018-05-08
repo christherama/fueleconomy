@@ -30,10 +30,10 @@ class VehicleContractSpec extends Specification {
         expect:
         def response = mvc.perform(get("/vehicles/some-vin"))
         response.json.vehicle
-        response.json.vehicle.vin
-        response.json.vehicle.make
-        response.json.vehicle.model
-        response.json.vehicle.year
+        response.json.vehicle.vin == "some-vin"
+        response.json.vehicle.make == "some-make"
+        response.json.vehicle.model == "some-model"
+        response.json.vehicle.year == 2017
     }
 
     def "GET /vehicles/:vin/mpg responds with 200 OK"() {

@@ -22,6 +22,7 @@ public class NhtsaVinDecodingService implements VinDecodingService {
         params.put("vin",vin);
         NhtsaResponse response = restTemplate.getForObject(nhtsaUrl,NhtsaResponse.class,params);
         return Vehicle.builder()
+                .vin(vin)
                 .year(getYearFromResponse(response))
                 .make(getMakeFromResponse(response))
                 .model(getModelFromResponse(response))
