@@ -16,5 +16,6 @@ deploy:
   region: us-west-2
   app: fueleconomy
   env: Fueleconomy-env-1
+  bucket_name: secure: "UNrH7lEXQ0vpeCJNQp9ygou/GZA7S/BDM+AL+J0IepF7h6im8XCF6KbiLt0Z33YNxF8W0Z4fVxGsOh9zUXH5suS4Hdy9MCVjCVIQAeU+iDCz0IOd0osbRsoI4Zck2G0WB+Ue/mVn71v/GWy/dUPZCrkIuw0Yygg+i9SOmuazPyjjZlxYswps/p+ncJvJKah1G8jMm8bWAvMT5LHyuHru6JwhgRahdIgTKizMBLxsIPoh7x6yZ7wU/7k4hOcQ5CNyhBVuZyC8G83OaIPGqrAJProp0Ykj2WTZdcC85QLa6Xpu5fg2VBbJRTWiaUrl5dEziyBp33Dg7fYS9Iz3eIJSgzOl6AJ8TBgUtM0212/7Yw+zBwffZ9G+9J7CQsq5IT87++N81sYYG228jVI46kiHwaAhxHijw2qYzMLUqCLZyUHZXuXmDCBWIGrSIpDvnxx+f8MsIJqIY0nGoG2A8w96t9zF4mEwaOmm8ZjunpeGdKEnOTuxbQb4mM5A7TrIU5Z6j1t3JlU2iKdohldg18eeDKM8qp9M5jwq+kxOwO4PEpsmCPRNCpUTPMC01a21S/9BwNXMQqZt5qMP0vF3eQ8xBxtS0lfuOGZ3MVnpsf+A72ejSeZze5BzgO+FGWNx787+ELUKJ46kaXSR6mP+cYSgJ4GbRFXaBr2vmbh/k/AIGOc="
   on:
     repo: christherama/fueleconomy
