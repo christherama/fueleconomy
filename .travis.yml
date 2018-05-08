@@ -9,8 +9,8 @@ cache:
   - "$HOME/.gradle/caches/"
   - "$HOME/.gradle/wrapper/"
 deploy:
-  provider: elasticbeanstalk
   skip_cleanup: true
+  provider: elasticbeanstalk
   access_key_id: AKIAJX6QBV3HSN6WT7XA
   secret_access_key:
     secure: oocnSP9ozkC9diqv+U0/JClid0ENbU2rqStWY1qokDGUqpot3MfLvunkGAwj4+CC3M1WHwflRg6wYGPt8pdrP0Umy7IAGzegTz5v/kYA6rbhNQw8dwLgQv1JLPUE0RVT1Y3XiLjMW/rZJ+Qx+kbvuuEWkGUUQuFY6b1rogsX/TpnKpaReclH4NLhOR6Qo//t7UWNVdRHJRUZ4RUBWwbMJfrt48mNlirlDkOAYp7jsFEn+5PhPQXfPMxOwxs8IiEyb9Antu9FqgdorMgppRnZxi+I+fxoeaXG3bRexVGu+eHRv/8LHc9Q0W1Y5xkt968gZuZm4wa8AIk/AQDrDmZoufmJ2d3vvDknVeT5kH9b7g/vLO37uJTXE9fgOp71u75gX34a7bfxmEmJN+RJxzc6We0VNynuZZJgpEslrrXfc0yS/lw6QI3cu/vew1pJHSee72fMo9aFo5lIeDS8k+ityQDaKMSqgAXSD0a/pUc0l3bCGZ2V1aM/H0yYuBegNW/vuU5bicA9v35liEryp03g9gdshNCBd6Na9UIyxuVOn+7MbeHI+sqWn4BFQe31CJKTAL69+wTHZbdqSQuMJKZJ4f/Rm9IgjMZef9BVlhMRTUeV47yUnz8d5rvBNRzfsSoRHgIj1UJUEjo9iqK5V83ai7X8N3T+CdZu9dHI7QX1jRQ=
