@@ -13,7 +13,8 @@ cache:
   - "$HOME/.gradle/wrapper/"
 
 before_deploy:
-  - cd build/libs
+  - cp ./Procfile ./build/libs
+  - cd ./build/libs
   - zip -r archive.zip *
 
 deploy:

@@ -1,0 +1,1 @@
+web: java -jar fueleconomy*.jar -DPORT=8080
