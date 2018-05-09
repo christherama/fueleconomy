@@ -15,6 +15,7 @@ cache:
 before_deploy:
   - cp ./Procfile ./build/libs
   - cd ./build/libs
+  - find . -name "*.jar" -exec sh -c 'mv "$1" app.jar' _ {} \;
   - zip -r archive.zip *
 
 deploy:
