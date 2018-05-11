@@ -1,1 +1,1 @@
-web: java -jar app.jar -DPORT=8080
+web: java -jar app.jar
